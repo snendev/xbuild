@@ -750,7 +750,7 @@ impl BuildEnv {
                 .sdk
                 .target_sdk_version
                 .unwrap();
-            cargo.use_android_ndk(&ndk, target_sdk_version, &target)?;
+            cargo.use_android_ndk(&ndk, target_sdk_version)?;
         }
         if target.platform() == Platform::Windows {
             let sdk = self.windows_sdk();
